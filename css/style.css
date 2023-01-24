@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{    
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(19, 39, 133);
+    color: white;
+    background-image: url(./imagen/jungle.jpg);
+    background-repeat: no-repeat;
+}
+
+#seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titulo{
+    font-family: 'Merienda', cursive;
+    color: black;
+    font-size: 32px;
+    background-color: #2B4865;
+    width: 100vh;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+}
+.subtitulo{
+    font-size: 24px;
+    color: black;
+    background-color: #70a74c;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    border: solid;
+    border-radius: 20px;
+}
+
+.buton-mokepon{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: center;
+    font-size: 17px;
+    width: 150px;
+    height: 200px;
+    background-color: #2B4865;
+    padding: 10px;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+input{
+    display: none;
+}
+input:hover + label, input:checked + label{
+border: solid white;
+}
+
+.butons-mokepon, .ataque-boton{
+    display: flex;
+    gap: 15px;
+}
+.buton-mokepon img{
+    width: 110px;
+    height: 100px;
+}
+#boton-mascota{
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+    width: 180px;
+    height: 50px;
+    padding: 10px;
+    border: 4px solid black;
+    border-radius: 30px;
+    margin: 15px;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+#boton-mascota:hover{
+    border: solid white;
+}
+
+#seleccionar-ataque{
+    flex-direction: column;
+    align-items: center;
+}
+.imgs{
+    margin: 10px;
+    border: solid black;
+    border-radius: 30px;
+    background-color: #2B4865;
+    height: 218px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+}
+.imgs img{
+ width: 180px;
+ height: 180px;
+}
+#img-jugador, #img-enemigo{
+    font-size: large;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.vs-buton{
+    font-size: 40px;
+}
+.boton-ataque{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    background-color: #2B4865;
+    height: 60px;
+    width: 80px;
+    border-radius: 30px;
+    padding: 10px;
+    border: 3px solid rgb(0, 0, 0);
+    box-sizing: border-box;
+}
+.boton-ataque:hover{
+    border: solid rgb(255, 255, 255);
+}
+#mensajes{
+    color: black;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DFF6FF;
+    width: 300px;
+    padding: 20px;
+    border-radius: 30px;
+    margin-top: 40px;
+
+}
+#boton-reinicio{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+    width: 150px;
+    border: none;
+    background-color: #ff0000;
+    border-radius: 30px;
+}
+#boton-reinicio:hover{
+    border: solid black;
+}
+.mascotas-stats{
+    display: flex;
+}
+.mascota-statf, .mascota-stats{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2B4865;
+    border: solid black;
+    border-radius: 30px;
+    padding: 10px;
+    box-sizing: border-box; 
+}
+
+@media(max-width:400px){
+.butons-mokepon, .ataque-boton{
+    flex-direction: column;
+}
+}
