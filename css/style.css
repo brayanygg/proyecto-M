@@ -7,6 +7,7 @@ body{
     color: white;
     background-image: url(./imagen/jungle.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #seleccionar-mascota{
@@ -80,6 +81,14 @@ border: solid white;
     background-color: transparent;
 }
 #boton-mascota:hover{
+    border: solid white;
+}
+#ver-mapa{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#mapa{
     border: solid white;
 }
 
