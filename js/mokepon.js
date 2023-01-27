@@ -1,5 +1,3 @@
-    //hipodogue-->💧, Capipepo-->🌱, ratigueya-->🔥
-    //camaroncin-->🔥💧, Pydos-->🌱🔥, turran-->💧🌱
     const seccionAtaque = document.getElementById('seleccionar-ataque')
     const seccionReinicio = document.getElementById('reinicio')
     seccionReinicio.style.display = 'none'
@@ -69,17 +67,12 @@ class Mokepon {
     }
 }
 
-let hipodoge = new Mokepon('Hipodoge', './img/mokepons_mokepon_hipodoge_attack.png', 5)
-
-let capipepo = new Mokepon('Capipepo', './img/mokepons_mokepon_capipepo_attack.png', 5)
-
-let ratigueya = new Mokepon('Ratigueya', './img/mokepons_mokepon_ratigueya_attack.png', 5)
-
-let camaroncin = new Mokepon('Camaroncin', './img/Camaroncin.png', 5)
-
-let pydos = new Mokepon('Pydos', './img/Pydos.png', 5)
-
-let turran = new Mokepon('Turran', './img/Turran.png', 5)
+    let hipodoge = new Mokepon('Hipodoge', './img/mokepons_mokepon_hipodoge_attack.png', 5)
+    let capipepo = new Mokepon('Capipepo', './img/mokepons_mokepon_capipepo_attack.png', 5)
+    let ratigueya = new Mokepon('Ratigueya', './img/mokepons_mokepon_ratigueya_attack.png', 5)
+    let camaroncin = new Mokepon('Camaroncin', './img/Camaroncin.png', 5)
+    let pydos = new Mokepon('Pydos', './img/Pydos.png', 5)
+    let turran = new Mokepon('Turran', './img/Turran.png', 5)
 
 hipodoge.ataques.push(
     { nombre: '💧', id: 'boton-agua' },
@@ -125,7 +118,6 @@ turran.ataques.push(
     { nombre: '🔥', id: 'boton-fuego' }, 
 )
 
-
 mokepones.push(hipodoge,capipepo,ratigueya,camaroncin,pydos,turran)
 
 function iniciarJuego() {
@@ -157,57 +149,50 @@ function iniciarJuego() {
 }
 
 function seleccionMascotaJugador() {
-
+    //seccionAtaque.style.display = 'flex'
+    
     if(inputHipodoge.checked) {
         spanMascotaJugador.innerHTML = inputHipodoge.id
         insertarImgJugador.innerHTML = `<img src = ${hipodoge.foto}>`
         mascotaJugador = inputHipodoge.id
-        //seccionAtaque.style.display = 'flex'
+        seccionMascota.style.display = 'none'
         sectionMapa.style.display = 'flex'
-        intervalo = setInterval(pintarPersonaje, 50)
-        seccionMascota.style.display = 'none'     
-        
+        iniciarMapa()       
     }else if(inputCapipepo.checked) {
         spanMascotaJugador.innerHTML = inputCapipepo.id
         insertarImgJugador.innerHTML = `<img src=${capipepo.foto}>`
         mascotaJugador = inputCapipepo.id
-        //seccionAtaque.style.display = 'flex'
-        sectionMapa.style.display = 'flex'
-        intervalo = setInterval(pintarPersonaje, 50)
         seccionMascota.style.display = 'none'
-
+        sectionMapa.style.display = 'flex'
+        iniciarMapa()
     }else if(inputRatigueya.checked) {
         spanMascotaJugador.innerHTML = inputRatigueya.id
         insertarImgJugador.innerHTML = `<img src = ${ratigueya.foto}>`
         mascotaJugador = inputRatigueya.id
-        //seccionAtaque.style.display = 'flex'
-        sectionMapa.style.display = 'flex'
-        intervalo = setInterval(pintarPersonaje, 50)
         seccionMascota.style.display = 'none'
+        sectionMapa.style.display = 'flex'
+        iniciarMapa()
     }else if(inputCamaroncin.checked) {
         spanMascotaJugador.innerHTML = inputCamaroncin.id
         insertarImgJugador.innerHTML = `<img src = ${camaroncin.foto}>`
         mascotaJugador = inputCamaroncin.id
-        //seccionAtaque.style.display = 'flex'
-        sectionMapa.style.display = 'flex'
-        intervalo = setInterval(pintarPersonaje, 50)
         seccionMascota.style.display = 'none'
+        sectionMapa.style.display = 'flex'
+        iniciarMapa()
     }else if(inputPydos.checked) {
         spanMascotaJugador.innerHTML = inputPydos.id
         insertarImgJugador.innerHTML = `<img src = ${pydos.foto}>`
         mascotaJugador = inputPydos.id
-        //seccionAtaque.style.display = 'flex'
-        sectionMapa.style.display = 'flex'
-        intervalo = setInterval(pintarPersonaje, 50)
         seccionMascota.style.display = 'none'
+        sectionMapa.style.display = 'flex'
+        iniciarMapa()
     }else if(inputTurran.checked) {
         spanMascotaJugador.innerHTML = inputTurran.id
         insertarImgJugador.innerHTML = `<img src = ${turran.foto}>`
         mascotaJugador = inputTurran.id
-        //seccionAtaque.style.display = 'flex'
-        sectionMapa.style.display = 'flex'
-        intervalo = setInterval(pintarPersonaje, 50)
         seccionMascota.style.display = 'none'
+        sectionMapa.style.display = 'flex'
+        iniciarMapa()
     }else{
         alert('Debes seleccionar una mascota')
     }
@@ -217,7 +202,7 @@ function seleccionMascotaJugador() {
 }
 
 function extraerAtaques(mascotaJugador) {
-    let ataques
+    let ataques   
     for (let i = 0; i < mokepones.length; i++) {
         if (mascotaJugador === mokepones[i].nombre) {
             ataques = mokepones[i].ataques
@@ -287,7 +272,6 @@ function ataqueAleatorioEnemigo() {
         ataqueEnemigo.push('Tierra')
     }
     console.log(ataqueEnemigo)
-    console.log(ataquesMascotaEnemigo)
     iniciarPelea()
 }   
 
@@ -354,28 +338,32 @@ function crearMensajeFinal(resultadoFinal) {
 }
 
 function reinicio() {
-
     location.reload()
 }
 
 function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
+function iniciarMapa() {
+    intervalo = setInterval(pintarPersonaje, 50)
+    window.addEventListener('keydown', teclaPresionada)
+    window.addEventListener('keyup', detenerMovimiento)
+}
 function moverArriba() {
-    velocidadY = - 5
+    capipepo.velocidadY = -5
 }
 function moverAbajo() {
-    velocidadY = + 5
+    capipepo.velocidadY =  5
 }
 function moverIzquierda() {
-    velocidadX = - 5
+    capipepo.velocidadX = -5
 }
 function moverDerecha() {
-    velocidadX = + 5
+    capipepo.velocidadX =  5
 }
 function pintarPersonaje() {
-    capipepo.x = capipepo.x + velocidadX
-    capipepo.y = capipepo.y + velocidadY
+    capipepo.x = capipepo.x + capipepo.velocidadX
+    capipepo.y = capipepo.y + capipepo.velocidadY
     lienzo.clearRect(0, 0, mapa.width, mapa.height)
     lienzo.drawImage(
         capipepo.mapaFoto,
@@ -386,7 +374,25 @@ function pintarPersonaje() {
     )
 }
 function detenerMovimiento() {
-    velocidadX = 0
-    velocidadY = 0
+    capipepo.velocidadX = 0
+    capipepo.velocidadY = 0
+}
+function teclaPresionada(event) {
+    switch (event.key) {
+        case 'ArrowUp':
+            moverArriba()
+            break
+        case 'ArrowDown':
+            moverAbajo()
+            break
+        case 'ArrowLeft':
+            moverIzquierda()
+            break
+        case 'ArrowRight':
+            moverDerecha()
+            break
+        default:
+            break
+    }
 }
 window.addEventListener('load', iniciarJuego)
