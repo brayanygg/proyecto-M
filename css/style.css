@@ -8,6 +8,7 @@ body{
     background-image: url(./imagen/jungle.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 #seleccionar-mascota{
