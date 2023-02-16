@@ -63,7 +63,9 @@ border: solid white;
 
 .butons-mokepon, .ataque-boton{
     display: flex;
+    justify-content: center;
     gap: 15px;
+    flex-wrap: wrap;
 }
 .buton-mokepon img{
     width: 110px;
@@ -89,8 +91,17 @@ border: solid white;
     justify-content: center;
     align-items: center;
 }
-#mapa{
-    border: solid white;
+#ver-mapa button{
+
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    background-color: #2B4865;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    border: 3px solid rgb(0, 0, 0);
+    box-sizing: border-box;
+    margin: 5px 0;
 }
 
 #seleccionar-ataque{
@@ -175,8 +186,10 @@ border: solid white;
     box-sizing: border-box; 
 }
 
-@media(max-width:400px){
-.butons-mokepon, .ataque-boton{
-    flex-direction: column;
-}
+@media(max-width:300px) {
+    #ver-mapa div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
