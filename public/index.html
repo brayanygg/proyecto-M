@@ -3,7 +3,7 @@
     <head>      
         <meta charset="utf-8">
         <title>Mokepón</title>
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -20,11 +20,31 @@
         <section id="ver-mapa">
             <h2>Recorre el mapa con tú Mokepón</h2>
             <canvas id="mapa"></canvas>
-            <button onmousedown="moverArriba()" onmouseup="detenerMovimiento()">Arriba</button>
+            <button 
+            ontouchstart="moverArriba()" 
+            onmousedown="moverArriba()" 
+            ontouchend="detenerMovimiento()"
+            onmouseup="detenerMovimiento()"
+            >Arriba</button>
             <div>
-                <button onmousedown="moverIzquierda()" onmouseup="detenerMovimiento()">Izquierda</button>
-                <button onmousedown="moverAbajo()" onmouseup="detenerMovimiento()">Abajo</button>
-                <button onmousedown="moverDerecha()" onmouseup="detenerMovimiento()">Derecha</button>
+                <button
+                ontouchstart="moverIzquierda()"
+                onmousedown="moverIzquierda()" 
+                ontouchend="detenerMovimiento()"
+                onmouseup="detenerMovimiento()"
+                >Izquierda</button>
+                <button
+                ontouchstart="moverAbajo()" 
+                onmousedown="moverAbajo()" 
+                ontouchend="detenerMovimiento()"
+                onmouseup="detenerMovimiento()"
+                >Abajo</button>
+                <button
+                ontouchstart="moverDerecha()" 
+                onmousedown="moverDerecha()" 
+                ontouchend="detenerMovimiento()"
+                onmouseup="detenerMovimiento()"
+                >Derecha</button>
             </div>
         </section>
 
@@ -65,6 +85,6 @@
                 </div>
             </div>
         </section>
-        <script src="./js/mokepon.js"></script>
+        <script src="./mokepon.js"></script>
     </body>
 </html>

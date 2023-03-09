@@ -5,7 +5,7 @@ body{
     font-family: 'Poppins', sans-serif;
     background-color: rgb(19, 39, 133);
     color: white;
-    background-image: url(./imagen/jungle.jpg);
+    background-image: url(./img/jungle.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -102,6 +102,7 @@ border: solid white;
     border: 3px solid rgb(0, 0, 0);
     box-sizing: border-box;
     margin: 5px 0;
+    user-select: none;
 }
 
 #seleccionar-ataque{
